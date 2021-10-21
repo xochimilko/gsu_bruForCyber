@@ -47,9 +47,10 @@ def crack(userID):
             sumString = str1 + str2
             guess = getMD5Hash(sumString)
             if hash_dictionary[userID] == guess:
-                print(f"password: {str1} salt: {str2}")
+                print(f"userID: {userID} password: {str1} salt: {str2}")
                 return 0
 
 
-userID = "001"
-crack(userID)
+answers = ["001", "054", "022", "060", "061", "080", "081", "003", "004", "010"]
+for uid in answers:
+    crack(uid)
